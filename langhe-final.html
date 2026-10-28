@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend su Misura nelle Langhe | 31 Ottobre - 2 Novembre</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #FAF6F0;
+            color: #2D2422;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .bg-cream { background-color: #FAF6F0; }
+        .bg-card { background-color: #FFFFFF; }
+        .bg-burgundy { background-color: #6B1D2F; }
+        .text-burgundy { color: #6B1D2F; }
+        .border-burgundy { border-color: #6B1D2F; }
+        .bg-amber-warm { background-color: #D97724; }
+        .text-amber-warm { color: #D97724; }
+        .bg-sage { background-color: #ECEAE0; }
+    </style>
+</head>
+<body class="min-h-screen pb-12">
+
+    <!-- Header Bar -->
+    <header class="bg-burgundy text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <span class="text-xs font-semibold tracking-wider uppercase text-amber-200">Itinerario Definitivo • 31 Ott. – 2 Nov.</span>
+                <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">Weekend nelle Basse Langhe & Bra</h1>
+                <p class="text-xs sm:text-sm text-amber-100 flex items-center gap-1 mt-0.5">
+                    Base: La Picchiera - Borgata Serra dei Turchi 60, La Morra 
+                    <a href="https://www.google.com/maps/search/?api=1&query=Borgata+Serra+dei+Turchi+60+La+Morra" target="_blank" rel="noopener noreferrer" class="underline hover:text-white text-xs inline-flex items-center gap-0.5 ml-1">
+                        📍 Maps
+                    </a>
+                </p>
+            </div>
+            <div class="flex gap-2 text-xs sm:text-sm overflow-x-auto pb-1 md:pb-0">
+                <a href="#itinerario" class="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg transition font-medium shrink-0">Itinerario</a>
+                <a href="#logistica" class="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg transition font-medium shrink-0">Logistica</a>
+                <a href="#glossario" class="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg transition font-medium shrink-0">Glossario & Tips</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-10">
+
+        <!-- Section 1: strategic highlights -->
+        <section class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
+            <h2 class="text-xl font-bold text-burgundy mb-4">I Punti Chiave del Vostro Viaggio</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-cream p-4 rounded-xl border border-stone-200">
+                    <div class="text-xs font-medium text-stone-500 uppercase">Degustazione Sabato</div>
+                    <div class="text-lg font-bold text-burgundy mt-1">Cantina Borgogno</div>
+                    <div class="text-xs text-stone-600 mt-1">Sotterranei in Barolo centro</div>
+                </div>
+                <div class="bg-cream p-4 rounded-xl border border-stone-200">
+                    <div class="text-xs font-medium text-stone-500 uppercase">Sabato Sera (Cena)</div>
+                    <div class="text-lg font-bold text-amber-warm mt-1">Osteria Sognatori</div>
+                    <div class="text-xs text-stone-600 mt-1">Alba (ZTL P.zza Prunotto)</div>
+                </div>
+                <div class="bg-cream p-4 rounded-xl border border-stone-200">
+                    <div class="text-xs font-medium text-stone-500 uppercase">Domenica (Pranzo)</div>
+                    <div class="text-lg font-bold text-amber-warm mt-1">Nelle Vigne (Diano)</div>
+                    <div class="text-xs text-stone-600 mt-1">Pranzo panoramico d'Ognissanti</div>
+                </div>
+                <div class="bg-cream p-4 rounded-xl border border-stone-200">
+                    <div class="text-xs font-medium text-stone-500 uppercase">Domenica Sera</div>
+                    <div class="text-lg font-bold text-emerald-700 mt-1">Slow Food a Bra</div>
+                    <div class="text-xs text-stone-600 mt-1">Aperitivo con Salsiccia cruda</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Interactive Day-by-Day Timeline -->
+        <section id="itinerario" class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">L'Itinerario Arricchito</span>
+                    <h2 class="text-2xl font-bold text-burgundy">Programma</h2>
+                </div>
+                <div id="maps-route-btn-container"></div>
+            </div>
+
+            <!-- Day Filters -->
+            <div class="flex border-b border-stone-200 mb-6 gap-2 text-xs sm:text-sm overflow-x-auto">
+                <button onclick="setDayFilter('all')" id="tab-all" class="px-4 py-2 border-b-2 border-burgundy font-bold text-burgundy shrink-0">Tutti i 3 Giorni</button>
+                <button onclick="setDayFilter('sab')" id="tab-sab" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Sabato 31 (Barolo & Alba)</button>
+                <button onclick="setDayFilter('dom')" id="tab-dom" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Domenica 1 (Cru & Bra)</button>
+                <button onclick="setDayFilter('lun')" id="tab-lun" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Lunedì 2 (Grinzane & Monforte)</button>
+            </div>
+
+            <!-- Timeline Container -->
+            <div id="timeline-container" class="space-y-6">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </section>
+
+        <!-- Section 3: Maps and Practical Logistics -->
+        <section id="logistica" class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="mb-6">
+                <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">Navigazione Rapida</span>
+                <h2 class="text-2xl font-bold text-burgundy">Distanze dalla Base (Serra dei Turchi)</h2>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Tabella Destinazioni -->
+                <div class="lg:col-span-2 overflow-x-auto border border-stone-200 rounded-xl">
+                    <table class="w-full text-xs text-left text-stone-700">
+                        <thead class="text-[11px] text-burgundy uppercase bg-stone-100">
+                            <tr><th class="py-2.5 px-3">Tappa Principale</th><th class="py-2.5 px-3">Distanza & Tempo (Auto)</th><th class="py-2.5 px-3">Naviga</th></tr>
+                        </thead>
+                        <tbody id="destTableBody" class="divide-y divide-stone-200"></tbody>
+                    </table>
+                </div>
+
+                <!-- Consigli Rapidi ZTL e Strade -->
+                <div class="space-y-3 text-xs">
+                    <div class="bg-amber-warm/10 border border-amber-warm/30 rounded-xl p-4">
+                        <h4 class="font-bold text-amber-900 mb-1">Rientro da Bra (Domenica Sera)</h4>
+                        <p class="text-stone-700">Il tragitto da Bra a La Morra (Serra dei Turchi) è molto comodo (SP7). Essendo pianeggiante e largo, è perfetto da percorrere la sera al buio, garantendovi un rientro in 15 minuti senza stress da tornanti collinari.</p>
+                    </div>
+                    <div class="bg-burgundy/10 border border-burgundy/30 rounded-xl p-4">
+                        <h4 class="font-bold text-burgundy mb-1">ZTL di Alba & Sognatori</h4>
+                        <p class="text-stone-700">Il centro storico di Alba è blindato dalle telecamere (ZTL pedonale). Impostate il navigatore tassativamente su <strong>Piazza Urbano Prunotto</strong>: sarete a 5 minuti a piedi dall'Osteria dei Sognatori senza rischiare multe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Glossario e Tips Aggiuntivi -->
+        <section id="glossario" class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="mb-6">
+                <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">Cultura Locale & Sopravvivenza</span>
+                <h2 class="text-2xl font-bold text-burgundy">Glossario Langarolo e Consigli Pratici</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Glossario -->
+                <div>
+                    <h3 class="text-base font-bold text-burgundy mb-3 border-b border-stone-100 pb-2">Le parole che leggerete nei menù</h3>
+                    <ul class="space-y-3 text-xs text-stone-700">
+                        <li><strong class="text-stone-900">Merenda Sinoira:</strong> Dalla parola "sin-a" (cena). È l'antico pasto pomeridiano contadino servito nei calici che anticipava (o sostituiva) la cena. Oggi si traduce in un "Aperitivo Lungo" a base di salumi, formaggi e vino.</li>
+                        <li><strong class="text-stone-900">Piola:</strong> La classica osteria piemontese di paese, rustica e chiassosa, dove si beve il vino della casa (es. Osteria dei Sognatori).</li>
+                        <li><strong class="text-stone-900">Tajarin:</strong> Sottilissime tagliatelle fresche tagliate a mano. La ricetta nobile prevede di usare dai 30 ai 40 tuorli d'uovo per chilo di farina.</li>
+                        <li><strong class="text-stone-900">Plin:</strong> Piccoli agnolotti rettangolari ripieni di carne e verdura, chiusi con un "pizzicotto" (il plin, appunto). Spesso serviti "al tovagliolo" (senza sugo) o nel sugo d'arrosto.</li>
+                        <li><strong class="text-stone-900">Salsiccia di Bra:</strong> Insaccato fresco unico in Italia: è fatto con carne magra di bovino (vitello) e si mangia rigorosamente cruda! È tutelata da Regio Decreto fin dal 1847.</li>
+                        <li><strong class="text-stone-900">Cru (o MGA):</strong> Menzioni Geografiche Aggiuntive. Come in Borgogna, indica la singola collina (vigneto) da cui proviene l'uva di quel Barolo (es. Cannubi, Bussia, Brunate).</li>
+                    </ul>
+                </div>
+
+                <!-- Meteo & Tartufi -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-base font-bold text-burgundy mb-3 border-b border-stone-100 pb-2">Meteo & Abbigliamento (Ognissanti)</h3>
+                        <p class="text-xs text-stone-700 leading-relaxed">Le colline a fine ottobre hanno un clima particolare. Le mattine presentano l'iconica <strong>bruma (nebbia bassa)</strong> nei fondovalle (da cui prende il nome il Nebbiolo). Nelle ore centrali, se c'è sole, si superano facilmente i 16-18°C, ma la sera l'umidità fa crollare le temperature. <strong>Regola d'oro: vestirsi a cipolla</strong> (piumino leggero, maglione di lana, t-shirt sotto). Scarpe rigorosamente comode senza tacco per acciottolati e passeggiate tra i filari umidi.</p>
+                    </div>
+                    
+                    <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                        <h3 class="text-sm font-bold text-amber-900 mb-2">Il Tartufo Bianco: Attenzione!</h3>
+                        <p class="text-xs text-amber-900/80 leading-relaxed">Siamo nel pieno della Fiera del Tartufo Bianco d'Alba (Tuber Magnatum Pico). Se lo ordinate al ristorante, <strong>non è un ingrediente, ma una grattata "extra"</strong>. Viene pesato al tavolo su una bilancina prima e dopo la grattata sul piatto caldo (tajarin o uovo fritto). Il prezzo varia a seconda delle quotazioni della borsa del tartufo (attualmente può viaggiare sui 50/70€ ogni 10 grammi). Chiedete sempre il prezzo al grammo al cameriere prima di confermare!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-6 text-center text-xs text-stone-500">
+        <p>Planner creato per il soggiorno a La Picchiera - Appartamento Jole (La Morra) | 31 Ottobre – 2 Novembre</p>
+    </footer>
+
+    <script>
+        const fullSchedule = [
+            // Sabato
+            { day: "sab", time: "09:30 – 11:45", title: "Viaggio Parma ➔ La Morra", cat: "🚗 Logistica", dist: "215 km", drive: "2h 15m", query: "La+Morra+Centro", reasoning: "Raggiungere il cuore topografico del Barolo per l'ora di pranzo permette un ingresso dolce e panoramico.", notes: "Viaggio autostradale via A1/A21/A33. Parcheggio all'ingresso del borgo." },
+            { day: "sab", time: "11:45 – 13:15", title: "Belvedere di La Morra & Pranzo", cat: "📍 Borghi & Belvedere", dist: "In loco", drive: "0m", query: "Belvedere+di+La+Morra", reasoning: "La terrazza panoramica a 500m di quota è ideale per orientarsi visivamente e comprendere la morfologia dei colli del Barolo sin dal primo minuto.", notes: "Affaccio dalla piazza e pranzo leggero in una delle osterie o vinerie del centro." },
+            { day: "sab", time: "13:30 – 15:00", title: "Borgo di Barolo & WiMu", cat: "🏰 Cultura & Castelli", dist: "6 km", drive: "10m", query: "WiMu+Museo+del+Vino+Barolo", reasoning: "Immersione nella culla del vino più celebre d'Italia; il museo curato da François Confino è una vera e propria scenografia sensoriale, non la solita esposizione polverosa.", notes: "Visita al percorso del WiMu all'interno del Castello Falletti e passeggiata nei vicoli acciottolati." },
+            { day: "sab", time: "15:00 – 16:30", title: "Degustazione Cantina Borgogno", cat: "🍷 Enogastronomia", dist: "In loco (Barolo)", drive: "0m", query: "Cantina+Borgogno+Barolo", reasoning: "Borgogno è la storia liquida d'Italia. Scendere nei suoi sotterranei labirintici in pieno centro storico vi fa respirare il profumo del legno e della tradizione centenaria.", notes: "Visita guidata in cantina e degustazione dei grandi rossi tradizionali." },
+            { day: "sab", time: "16:45 – 18:00", title: "CHECK-IN: App. Jole (La Picchiera)", cat: "🏠 Alloggio", dist: "8,5 km", drive: "12m", query: "La+Picchiera+Appartamento+Jole+La+Morra", reasoning: "Prendere possesso dell'alloggio all'apertura oraria per rinfrescarsi e godersi la pace dei vigneti privati al crepuscolo.", notes: "Sistemazione in Borgata Serra dei Turchi 60. Pausa in appartamento.", isHousing: true },
+            { day: "sab", time: "18:15 – 19:45", title: "Passeggiata nell'Alba Pre-Cena", cat: "📍 Borghi & Belvedere", dist: "13 km", drive: "18m", query: "Piazza+Prunotto+Alba", reasoning: "Respirare l'atmosfera festosa e inebriante della 'capitale' delle Langhe durante le settimane d'oro della Fiera Internazionale del Tartufo Bianco.", notes: "Sosta al parcheggio Prunotto. Camminata pedonale in Via Vittorio Emanuele e Piazza Duomo." },
+            { day: "sab", time: "20:00 – 22:30", title: "CENA: Osteria dei Sognatori", cat: "🍷 Enogastronomia", dist: "A piedi", drive: "5m", query: "Osteria+dei+Sognatori+Alba", reasoning: "L'essenza della piola piemontese: tavoli in legno, vocio allegro, un oste teatrale che recita il menù a voce e la miglior battuta al coltello della città.", notes: "Cena conviviale e rustica nel centro storico di Alba. Rientro a La Morra dopo le 23:00.", isResto: true },
+
+            // Domenica
+            { day: "dom", time: "09:30 – 10:30", title: "Cappella del Barolo (Brunate)", cat: "🏰 Cultura & Castelli", dist: "3,5 km", drive: "6m", query: "Cappella+del+Barolo+Brunate", reasoning: "Simbolo dell'arte contemporanea sbalzata nei vigneti. Visitarla la mattina permette di evitare il caos di auto sulla stradina stretta di campagna.", notes: "Foto di rito davanti alla facciata colorata di LeWitt & Tremlett. Passeggiata sul crinale." },
+            { day: "dom", time: "10:50 – 12:15", title: "Serralunga d'Alba & Donjon", cat: "📍 Borghi & Belvedere", dist: "15 km", drive: "20m", query: "Castello+di+Serralunga+d'Alba", reasoning: "La fortezza gotico-francese più slanciata del Piemonte domina i cru dove nascono i Barolo più strutturati e austeri e dalla massima longevità.", notes: "Passeggiata al cospetto del castello trecentesco e ampie foto panoramiche della valle." },
+            { day: "dom", time: "12:45 – 15:30", title: "PRANZO: Trattoria nelle Vigne", cat: "🍷 Enogastronomia", dist: "10 km", drive: "15m", query: "Trattoria+nelle+Vigne+Diano+d'Alba", reasoning: "Il momento d'oro culinario del weekend: un pranzo d'Ognissanti eccellente sospeso in aria grazie alla monumentale vetrata della sala principale.", notes: "Ampio parcheggio asfaltato adiacente. Menù classico (non perdetevi i tajarin e i dolci della casa).", isResto: true },
+            { day: "dom", time: "15:45 – 17:00", title: "Castiglione Falletto & La Bottega", cat: "📍 Borghi & Belvedere", dist: "8 km", drive: "12m", query: "Castiglione+Falletto+Centro", reasoning: "Borgo tranquillo e posizionato strategicamente al centro della mappa, perfetto per favorire la digestione prima di cambiare zona.", notes: "Passeggiata in piano attorno alla rocca e pausa rigenerante alla suggestiva Bottega del Vino scavata nelle mura." },
+            { day: "dom", time: "17:15 – 17:45", title: "Discesa a valle verso Bra", cat: "🚗 Logistica", dist: "18 km", drive: "20m", query: "Bra+Centro", reasoning: "Ci si sposta dalla langa collinare del Barolo verso l'area pianeggiante del Roero per scoprire un mondo diverso e legato a Slow Food.", notes: "Tragitto su strada ampia." },
+            { day: "dom", time: "17:45 – 21:00", title: "Aperitivo con Salsiccia a Bra", cat: "🍷 Enogastronomia", dist: "In loco", drive: "0m", query: "Salsiccia+di+Bra+Caffe+Converso", reasoning: "Dopo l'enorme pranzo alla Trattoria, non ha senso sedersi a cena. Molto meglio una merenda sinoira per assaggiare l'iconica Salsiccia cruda di vitello.", notes: "Passeggiata sotto i portici barocchi (Palazzo Traversa) e aperitivo rinforzato al Caffè Converso o in vineria. Rientro fluido in 15 minuti a La Morra alle 21:15." },
+
+            // Lunedì
+            { day: "lun", time: "09:15 – 10:00", title: "CHECK-OUT: La Picchiera", cat: "🏠 Alloggio", dist: "In loco", drive: "0m", query: "La+Picchiera+Appartamento+Jole+La+Morra", reasoning: "Il check-out puntuale alle 10:00 permette di essere i primi al cancello di Grinzane Cavour, massimizzando il tempo prima del rientro.", notes: "Consegna dell'appartamento, valigie in auto e partenza definitiva dalla borgata.", isHousing: true },
+            { day: "lun", time: "10:15 – 12:00", title: "Castello di Grinzane Cavour", cat: "🏰 Cultura & Castelli", dist: "11 km", drive: "14m", query: "Castello+di+Grinzane+Cavour", reasoning: "L'eredità politica e agraria del Conte Camillo Benso. È il luogo dove la moderna enologia piemontese è stata scientificamente progettata.", notes: "Visita al maniero che ospita l'Asta Mondiale del Tartufo Bianco e camminata finale nel vigneto didattico." },
+            { day: "lun", time: "12:20 – 14:15", title: "Monforte d'Alba & Anfiteatro", cat: "📍 Borghi & Belvedere", dist: "10 km", drive: "14m", query: "Monforte+d'Alba+Centro", reasoning: "Il salotto di pietra: l'anfiteatro Horszowski all'aperto, pavimentato a prato e ciottoli, è l'affascinante sorpresa che chiude il viaggio in collina.", notes: "Salita nei vicoli medievali (l'Ortica) e pranzo in un bistrot/vineria locale." },
+            { day: "lun", time: "14:30 – 16:50", title: "Rientro a Parma via Autostrada", cat: "🚗 Logistica", dist: "215 km", drive: "2h 20m", query: "Parma", reasoning: "Pianificare il rientro il lunedì pomeriggio regala il grande vantaggio di strade e caselli del tutto liberi dal traffico dei turisti domenicali.", notes: "Si esce verso Asti o Cherasco/Marene per agganciare rapidamente la rete autostradale (A33/A21/A1)." }
+        ];
+
+        const distancesLocal = [
+            { t: "La Morra (Piazza Castello)", k: "3 km", time: "5 min", q: "Belvedere+di+La+Morra" },
+            { t: "Barolo (Borgogno & WiMu)", k: "8,5 km", time: "12 min", q: "Castello+Falletti+Barolo" },
+            { t: "Alba (ZTL P.zza Prunotto)", k: "13 km", time: "18 min", q: "Parcheggio+Piazza+Prunotto+Alba" },
+            { t: "Cappella del Barolo (Brunate)", k: "3,5 km", time: "6 min", q: "Cappella+del+Barolo+Brunate" },
+            { t: "Serralunga d'Alba", k: "16 km", time: "22 min", q: "Castello+di+Serralunga+d'Alba" },
+            { t: "Trattoria Nelle Vigne (Diano)", k: "18 km", time: "22 min", q: "Trattoria+nelle+Vigne+Diano+d'Alba" },
+            { t: "Castiglione Falletto", k: "8 km", time: "12 min", q: "Castiglione+Falletto+Centro" },
+            { t: "Bra (Centro Storico)", k: "14 km", time: "15 min", q: "Bra+Centro" },
+            { t: "Grinzane Cavour", k: "11 km", time: "14 min", q: "Castello+di+Grinzane+Cavour" },
+            { t: "Monforte d'Alba", k: "13 km", time: "18 min", q: "Monforte+d'Alba+Centro" }
+        ];
+
+        let currentDayFilter = "all";
+
+        function setDayFilter(day) {
+            currentDayFilter = day;
+            const days = ["all", "sab", "dom", "lun"];
+            days.forEach(d => {
+                const el = document.getElementById("tab-" + d);
+                el.className = (d === day) 
+                    ? "px-4 py-2 border-b-2 border-burgundy font-bold text-burgundy shrink-0" 
+                    : "px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0";
+            });
+            renderTimelineCards();
+        }
+
+        function renderTimelineCards() {
+            const container = document.getElementById("timeline-container");
+            container.innerHTML = "";
+
+            const filteredData = fullSchedule.filter(i => currentDayFilter === "all" || i.day === currentDayFilter);
+
+            // Compute dynamic Maps Route button
+            let routePoints = [];
+            let lastQ = "";
+            filteredData.forEach(i => {
+                if (i.query && i.query !== "Parma" && i.query !== lastQ && i.cat !== "🏠 Alloggio" && i.cat !== "🚗 Logistica") {
+                    routePoints.push(encodeURIComponent(i.query));
+                    lastQ = i.query;
+                }
+            });
+
+            let mapsLink = "";
+            if (currentDayFilter === "all") {
+                mapsLink = `https://www.google.com/maps/dir/Parma/${routePoints.join('/')}/Parma`;
+            } else {
+                mapsLink = `https://www.google.com/maps/dir/Borgata+Serra+dei+Turchi+60+La+Morra/${routePoints.join('/')}/Borgata+Serra+dei+Turchi+60+La+Morra`;
+            }
+
+            document.getElementById("maps-route-btn-container").innerHTML = `
+                <a href="${mapsLink}" target="_blank" class="bg-amber-warm hover:bg-amber-warm/90 text-white px-4 py-2 rounded-xl text-xs font-bold transition shadow-sm flex items-center justify-center gap-1.5 shrink-0 self-start sm:self-auto text-center">
+                    🗺️ Mappa Itinerario su Google
+                </a>
+            `;
+
+            if (filteredData.length === 0) return;
+
+            filteredData.forEach(item => {
+                const card = document.createElement("div");
+                
+                let borderCol = "border-stone-200 bg-white";
+                let dayLabel = item.day === 'sab' ? 'Sabato 31 Ott' : (item.day === 'dom' ? 'Domenica 1 Nov' : 'Lunedì 2 Nov');
+                
+                if (item.isHousing) {
+                    borderCol = "border-amber-warm/50 bg-amber-50/40";
+                } else if (item.isResto) {
+                    borderCol = "border-burgundy/40 bg-red-50/30";
+                }
+
+                let badge = '';
+                if (item.cat.includes("Enogastronomia")) badge = '<span class="bg-red-100 text-[#6B1D2F] border border-red-200 px-2 py-0.5 rounded text-[11px] font-bold shrink-0">🍷 Enogastronomia</span>';
+                else if (item.cat.includes("Cultura")) badge = '<span class="bg-amber-100 text-[#D97724] border border-amber-200 px-2 py-0.5 rounded text-[11px] font-bold shrink-0">🏰 Cultura & Castelli</span>';
+                else if (item.cat.includes("Borghi")) badge = '<span class="bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded text-[11px] font-bold shrink-0">📍 Borghi & Belvedere</span>';
+                else if (item.cat.includes("Logistica")) badge = '<span class="bg-stone-200 text-stone-600 border border-stone-300 px-2 py-0.5 rounded text-[11px] font-bold shrink-0">🚗 Logistica</span>';
+                else badge = '<span class="bg-amber-warm/20 text-amber-900 border border-amber-warm/40 px-2 py-0.5 rounded text-[11px] font-bold shrink-0">🏠 Alloggio</span>';
+
+                const mapsNav = `https://www.google.com/maps/search/?api=1&query=${item.query}`;
+                const imagesNav = `https://www.google.com/search?tbm=isch&q=${item.query}`;
+
+                card.className = `p-5 rounded-2xl border ${borderCol} transition hover:shadow-md flex flex-col gap-4`;
+                card.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
+                        <div class="flex flex-wrap items-center gap-2 text-xs">
+                            <span class="px-2.5 py-1 rounded-md bg-stone-100 text-stone-700">${dayLabel}</span>
+                            <span class="font-bold text-stone-800 text-sm">${item.time}</span>
+                            <span class="text-stone-400 hidden sm:inline">•</span>
+                            <span class="text-stone-500">Tratta: ${item.dist} (${item.drive})</span>
+                        </div>
+                        <a href="${mapsNav}" target="_blank" class="inline-flex items-center justify-center gap-1 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs px-3 py-1.5 rounded-lg font-semibold transition border border-stone-300 self-start sm:self-auto shrink-0">
+                            📍 Naviga con Maps
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-burgundy text-base sm:text-xl">${item.title}</h4>
+                        <div class="mt-1 flex flex-wrap gap-2 items-center">
+                            ${badge}
+                            <a href="${imagesNav}" target="_blank" class="text-[10px] bg-stone-100 hover:bg-stone-200 border border-stone-300 text-stone-700 px-2 py-0.5 rounded font-bold transition flex items-center gap-1 shrink-0" title="Cerca immagini su Google">
+                                🔍 Cerca Immagini
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50/60 border border-amber-200/80 rounded-xl p-3.5 text-xs text-stone-800 space-y-1">
+                        <div class="font-bold text-amber-900 flex items-center gap-1.5">
+                            <span>💡 Perché questa tappa?</span>
+                        </div>
+                        <p class="leading-relaxed text-stone-700">${item.reasoning}</p>
+                    </div>
+
+                    <div class="text-xs text-stone-600 leading-relaxed pt-1 border-t border-stone-100">
+                        <strong>Dettaglio Operativo:</strong> ${item.notes}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            renderTimelineCards();
+            const tb = document.getElementById("destTableBody");
+            distancesLocal.forEach(d => {
+                tb.innerHTML += `<tr class="hover:bg-stone-50 transition"><td class="py-2.5 px-3 font-medium text-stone-900">${d.t}</td><td class="py-2.5 px-3 text-stone-600">${d.k} (${d.time})</td><td class="py-2.5 px-3"><a href="https://www.google.com/maps/search/?api=1&query=${d.q}" target="_blank" class="text-burgundy hover:underline text-[11px] font-semibold flex items-center gap-0.5">📍 Apri in Maps</a></td></tr>`;
+            });
+        });
+    </script>
+</body>
+</html>
