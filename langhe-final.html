@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekend su Misura nelle Langhe | 31 Ottobre - 2 Novembre</title>
+    <title>Weekend nelle Langhe | 31 Ottobre - 2 Novembre</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -28,10 +28,10 @@
     <header class="bg-burgundy text-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div>
-                <span class="text-xs font-semibold tracking-wider uppercase text-amber-200">Itinerario Definitivo • 31 Ott. – 2 Nov.</span>
+                <span class="text-xs font-semibold tracking-wider uppercase text-amber-200">Piano Definitivo • 31 Ott. – 2 Nov.</span>
                 <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">Weekend nelle Basse Langhe & Bra</h1>
                 <p class="text-xs sm:text-sm text-amber-100 flex items-center gap-1 mt-0.5">
-                    Base: La Picchiera - Borgata Serra dei Turchi 60, La Morra 
+                    Alloggio: La Picchiera - Borgata Serra dei Turchi 60, La Morra 
                     <a href="https://www.google.com/maps/search/?api=1&query=Borgata+Serra+dei+Turchi+60+La+Morra" target="_blank" rel="noopener noreferrer" class="underline hover:text-white text-xs inline-flex items-center gap-0.5 ml-1">
                         📍 Maps
                     </a>
@@ -39,6 +39,7 @@
             </div>
             <div class="flex gap-2 text-xs sm:text-sm overflow-x-auto pb-1 md:pb-0">
                 <a href="#itinerario" class="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg transition font-medium shrink-0">Itinerario</a>
+                <a href="#ristoranti" class="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg transition font-medium shrink-0">I Ristoranti</a>
                 <a href="#logistica" class="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg transition font-medium shrink-0">Logistica</a>
                 <a href="#glossario" class="bg-white/10 hover:bg-white/20 px-3 py-2 rounded-lg transition font-medium shrink-0">Glossario & Tips</a>
             </div>
@@ -47,39 +48,100 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-10">
 
-        <!-- Section 1: strategic highlights -->
+        <!-- Section 1: Inquadramento e Vincoli -->
         <section class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
-            <h2 class="text-xl font-bold text-burgundy mb-4">I Punti Chiave del Vostro Viaggio</h2>
+            <h2 class="text-xl font-bold text-burgundy mb-4">I Punti Chiave del Vostro Soggiorno</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="bg-cream p-4 rounded-xl border border-stone-200">
                     <div class="text-xs font-medium text-stone-500 uppercase">Degustazione Sabato</div>
                     <div class="text-lg font-bold text-burgundy mt-1">Cantina Borgogno</div>
-                    <div class="text-xs text-stone-600 mt-1">Sotterranei in Barolo centro</div>
+                    <div class="text-xs text-stone-600 mt-1">Sotterranei a Barolo centro</div>
                 </div>
                 <div class="bg-cream p-4 rounded-xl border border-stone-200">
-                    <div class="text-xs font-medium text-stone-500 uppercase">Sabato Sera (Cena)</div>
+                    <div class="text-xs font-medium text-stone-500 uppercase">Sabato a Cena</div>
                     <div class="text-lg font-bold text-amber-warm mt-1">Osteria Sognatori</div>
                     <div class="text-xs text-stone-600 mt-1">Alba (ZTL P.zza Prunotto)</div>
                 </div>
                 <div class="bg-cream p-4 rounded-xl border border-stone-200">
-                    <div class="text-xs font-medium text-stone-500 uppercase">Domenica (Pranzo)</div>
+                    <div class="text-xs font-medium text-stone-500 uppercase">Domenica a Cena</div>
                     <div class="text-lg font-bold text-amber-warm mt-1">Nelle Vigne (Diano)</div>
-                    <div class="text-xs text-stone-600 mt-1">Pranzo panoramico d'Ognissanti</div>
+                    <div class="text-xs text-stone-600 mt-1">Cena panoramica d'Ognissanti</div>
                 </div>
                 <div class="bg-cream p-4 rounded-xl border border-stone-200">
-                    <div class="text-xs font-medium text-stone-500 uppercase">Domenica Sera</div>
+                    <div class="text-xs font-medium text-stone-500 uppercase">Lunedì a Pranzo</div>
                     <div class="text-lg font-bold text-emerald-700 mt-1">Slow Food a Bra</div>
-                    <div class="text-xs text-stone-600 mt-1">Aperitivo con Salsiccia cruda</div>
+                    <div class="text-xs text-stone-600 mt-1">Pranzo & acquisto Salsiccia</div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2: Interactive Day-by-Day Timeline -->
+        <!-- Section 2: Scheda Operativa Ristoranti -->
+        <section id="ristoranti" class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
+            <div class="mb-6">
+                <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">I Due Ristoranti Fissi</span>
+                <h2 class="text-2xl font-bold text-burgundy">Scheda Operativa Prenotazioni</h2>
+                <p class="text-stone-600 text-sm mt-1">Clicca sui bottoni per impostare direttamente il navigatore.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Sognatori -->
+                <div class="bg-cream rounded-xl p-5 border border-stone-300 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-burgundy">Osteria dei Sognatori</h3>
+                                <p class="text-xs text-stone-500">Via Macrino 8, Alba (CN)</p>
+                            </div>
+                            <span class="bg-burgundy text-white text-xs px-2.5 py-1 rounded-full font-bold shrink-0">Sabato a Cena (20:00)</span>
+                        </div>
+                        <div class="mt-4 text-xs text-stone-700 space-y-2">
+                            <p><strong>Cucina:</strong> L'autentica "piola" piemontese: menù recitato a voce, tajarin fatti a mano, plin al fumo, tagliere di salumi e battuta di fassona.</p>
+                            <p><strong>ZTL & Parcheggio:</strong> Pedonale. Non entrare nella ZTL: sostare in <strong>Piazza Urbano Prunotto</strong> (a 350m a piedi).</p>
+                            <p><strong>Contatto:</strong> Tel/WhatsApp: +39 388 9592000.</p>
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-stone-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-xs">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Parcheggio+Piazza+Prunotto+Alba" target="_blank" rel="noopener noreferrer" class="text-stone-700 hover:text-burgundy underline font-medium">
+                            🅿️ Parcheggio P.zza Prunotto
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Osteria+dei+Sognatori+Via+Macrino+Alba" target="_blank" rel="noopener noreferrer" class="bg-burgundy text-white hover:bg-burgundy/90 px-3 py-1.5 rounded-lg text-center font-semibold transition">
+                            📍 Naviga all'Osteria
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nelle Vigne -->
+                <div class="bg-cream rounded-xl p-5 border border-stone-300 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-lg font-bold text-burgundy">Trattoria nelle Vigne</h3>
+                                <p class="text-xs text-stone-500">Via Moglia Gerlotto 7a, Diano d'Alba (CN)</p>
+                            </div>
+                            <span class="bg-amber-warm text-white text-xs px-2.5 py-1 rounded-full font-bold shrink-0">Domenica a Cena (19:45)</span>
+                        </div>
+                        <div class="mt-4 text-xs text-stone-700 space-y-2">
+                            <p><strong>Cucina:</strong> Tradizione langarola d'eccellenza (tajarin ai 30 tuorli, brasato al Barolo, carrello dei dolci) servita nella celebre sala a vetrate con affaccio aereo sui colli illuminati.</p>
+                            <p><strong>Accesso & Parcheggio:</strong> Ampio parcheggio privato asfaltato adiacente all'ingresso, comodissimo e senza dislivelli.</p>
+                            <p><strong>Contatto:</strong> Prenotazioni: +39 0173 468503.</p>
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-stone-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 text-xs">
+                        <span class="font-bold text-stone-800">Cena Panoramica Serale</span>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Trattoria+nelle+Vigne+Diano+d'Alba" target="_blank" rel="noopener noreferrer" class="bg-burgundy text-white hover:bg-burgundy/90 px-3 py-1.5 rounded-lg text-center font-semibold transition">
+                            📍 Naviga alla Trattoria
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Interactive Day-by-Day Timeline -->
         <section id="itinerario" class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
             <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
-                    <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">L'Itinerario Arricchito</span>
-                    <h2 class="text-2xl font-bold text-burgundy">Programma</h2>
+                    <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">Cronoprogramma Integrato</span>
+                    <h2 class="text-2xl font-bold text-burgundy">L'Itinerario Giorno per Giorno</h2>
                 </div>
                 <div id="maps-route-btn-container"></div>
             </div>
@@ -87,9 +149,9 @@
             <!-- Day Filters -->
             <div class="flex border-b border-stone-200 mb-6 gap-2 text-xs sm:text-sm overflow-x-auto">
                 <button onclick="setDayFilter('all')" id="tab-all" class="px-4 py-2 border-b-2 border-burgundy font-bold text-burgundy shrink-0">Tutti i 3 Giorni</button>
-                <button onclick="setDayFilter('sab')" id="tab-sab" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Sabato 31 (Barolo & Alba)</button>
-                <button onclick="setDayFilter('dom')" id="tab-dom" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Domenica 1 (Cru & Bra)</button>
-                <button onclick="setDayFilter('lun')" id="tab-lun" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Lunedì 2 (Grinzane & Monforte)</button>
+                <button onclick="setDayFilter('sab')" id="tab-sab" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Sabato 31 (Borgogno & Sognatori)</button>
+                <button onclick="setDayFilter('dom')" id="tab-dom" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Domenica 1 (Cru, Monforte & Vigne)</button>
+                <button onclick="setDayFilter('lun')" id="tab-lun" class="px-4 py-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800 font-medium shrink-0">Lunedì 2 (Grinzane & Bra)</button>
             </div>
 
             <!-- Timeline Container -->
@@ -98,7 +160,7 @@
             </div>
         </section>
 
-        <!-- Section 3: Maps and Practical Logistics -->
+        <!-- Section 4: Maps and Practical Logistics -->
         <section id="logistica" class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
             <div class="mb-6">
                 <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">Navigazione Rapida</span>
@@ -119,21 +181,25 @@
                 <!-- Consigli Rapidi ZTL e Strade -->
                 <div class="space-y-3 text-xs">
                     <div class="bg-amber-warm/10 border border-amber-warm/30 rounded-xl p-4">
-                        <h4 class="font-bold text-amber-900 mb-1">Rientro da Bra (Domenica Sera)</h4>
-                        <p class="text-stone-700">Il tragitto da Bra a La Morra (Serra dei Turchi) è molto comodo (SP7). Essendo pianeggiante e largo, è perfetto da percorrere la sera al buio, garantendovi un rientro in 15 minuti senza stress da tornanti collinari.</p>
+                        <h4 class="font-bold text-amber-900 mb-1">Domenica Sera: Rientro da Diano d'Alba</h4>
+                        <p class="text-stone-700">Dalla Trattoria nelle Vigne a Borgata Serra dei Turchi sono circa 18 km (22-25 min). Percorrete la SP130 e scendete verso la vallata con calma prima di risalire sul versante di La Morra.</p>
                     </div>
                     <div class="bg-burgundy/10 border border-burgundy/30 rounded-xl p-4">
                         <h4 class="font-bold text-burgundy mb-1">ZTL di Alba & Sognatori</h4>
-                        <p class="text-stone-700">Il centro storico di Alba è blindato dalle telecamere (ZTL pedonale). Impostate il navigatore tassativamente su <strong>Piazza Urbano Prunotto</strong>: sarete a 5 minuti a piedi dall'Osteria dei Sognatori senza rischiare multe.</p>
+                        <p class="text-stone-700">Il centro storico di Alba è pedonale e controllato da telecamere. Impostate il navigatore su <strong>Piazza Urbano Prunotto</strong>: parcheggio comodo a 5 minuti a piedi dal locale senza stress.</p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
+                        <h4 class="font-bold text-emerald-900 mb-1">Lunedì: Rientro Diretto da Bra</h4>
+                        <p class="text-stone-700">Dopo la visita a Grinzane Cavour e il pranzo a Bra, per tornare a Parma basta imboccare il casello di <strong>Marene (A33)</strong> a soli 8 km da Bra, con immissione rapida sulla A21/A1 senza code.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Glossario e Tips Aggiuntivi -->
+        <!-- Section 5: Glossario e Tips Aggiuntivi -->
         <section id="glossario" class="bg-card rounded-2xl p-6 shadow-sm border border-stone-200">
             <div class="mb-6">
-                <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">Cultura Locale & Sopravvivenza</span>
+                <span class="text-xs font-bold text-amber-warm uppercase tracking-wider">Cultura Locale & Consigli</span>
                 <h2 class="text-2xl font-bold text-burgundy">Glossario Langarolo e Consigli Pratici</h2>
             </div>
 
@@ -142,12 +208,11 @@
                 <div>
                     <h3 class="text-base font-bold text-burgundy mb-3 border-b border-stone-100 pb-2">Le parole che leggerete nei menù</h3>
                     <ul class="space-y-3 text-xs text-stone-700">
-                        <li><strong class="text-stone-900">Merenda Sinoira:</strong> Dalla parola "sin-a" (cena). È l'antico pasto pomeridiano contadino servito nei calici che anticipava (o sostituiva) la cena. Oggi si traduce in un "Aperitivo Lungo" a base di salumi, formaggi e vino.</li>
-                        <li><strong class="text-stone-900">Piola:</strong> La classica osteria piemontese di paese, rustica e chiassosa, dove si beve il vino della casa (es. Osteria dei Sognatori).</li>
-                        <li><strong class="text-stone-900">Tajarin:</strong> Sottilissime tagliatelle fresche tagliate a mano. La ricetta nobile prevede di usare dai 30 ai 40 tuorli d'uovo per chilo di farina.</li>
-                        <li><strong class="text-stone-900">Plin:</strong> Piccoli agnolotti rettangolari ripieni di carne e verdura, chiusi con un "pizzicotto" (il plin, appunto). Spesso serviti "al tovagliolo" (senza sugo) o nel sugo d'arrosto.</li>
-                        <li><strong class="text-stone-900">Salsiccia di Bra:</strong> Insaccato fresco unico in Italia: è fatto con carne magra di bovino (vitello) e si mangia rigorosamente cruda! È tutelata da Regio Decreto fin dal 1847.</li>
-                        <li><strong class="text-stone-900">Cru (o MGA):</strong> Menzioni Geografiche Aggiuntive. Come in Borgogna, indica la singola collina (vigneto) da cui proviene l'uva di quel Barolo (es. Cannubi, Bussia, Brunate).</li>
+                        <li><strong class="text-stone-900">Piola:</strong> La classica osteria piemontese informale e calorosa, dove si beve il vino della casa (es. Osteria dei Sognatori).</li>
+                        <li><strong class="text-stone-900">Tajarin:</strong> Sottilissime tagliatelle fresche all'uovo tagliate a mano. La ricetta tradizionale nobile prevede l'uso di 30-40 tuorli d'uovo per chilo di farina.</li>
+                        <li><strong class="text-stone-900">Plin:</strong> Piccoli agnolotti rettangolari ripieni di tre arrosti e verdura, chiusi a mano con un "pizzicotto" (il plin).</li>
+                        <li><strong class="text-stone-900">Salsiccia di Bra:</strong> Insaccato fresco unico in Italia: è preparato con carne magra di vitello e si mangia rigorosamente cruda con pane croccante. Tutelata da Regio Decreto fin dal 1847.</li>
+                        <li><strong class="text-stone-900">Cru (MGA):</strong> Menzioni Geografiche Aggiuntive. Identificano la specifica collina o vigneto delimitato (es. Cannubi, Brunate, Cerequio) che dona al vino caratteristiche uniche.</li>
                     </ul>
                 </div>
 
@@ -155,12 +220,12 @@
                 <div class="space-y-6">
                     <div>
                         <h3 class="text-base font-bold text-burgundy mb-3 border-b border-stone-100 pb-2">Meteo & Abbigliamento (Ognissanti)</h3>
-                        <p class="text-xs text-stone-700 leading-relaxed">Le colline a fine ottobre hanno un clima particolare. Le mattine presentano l'iconica <strong>bruma (nebbia bassa)</strong> nei fondovalle (da cui prende il nome il Nebbiolo). Nelle ore centrali, se c'è sole, si superano facilmente i 16-18°C, ma la sera l'umidità fa crollare le temperature. <strong>Regola d'oro: vestirsi a cipolla</strong> (piumino leggero, maglione di lana, t-shirt sotto). Scarpe rigorosamente comode senza tacco per acciottolati e passeggiate tra i filari umidi.</p>
+                        <p class="text-xs text-stone-700 leading-relaxed">Le colline a inizio novembre alternano mattine con l'iconica <strong>bruma (nebbia bassa nei fondovalle)</strong> a ore centrali miti e soleggiate (16-18°C), mentre la sera l'umidità abbassa la temperatura. <strong>Vestitevi a cipolla</strong> (piumino leggero, maglione e t-shirt). Scarpe assolutamente basse e comode per gli acciottolati dei borghi e le passeggiate tra i filari.</p>
                     </div>
                     
                     <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
-                        <h3 class="text-sm font-bold text-amber-900 mb-2">Il Tartufo Bianco: Attenzione!</h3>
-                        <p class="text-xs text-amber-900/80 leading-relaxed">Siamo nel pieno della Fiera del Tartufo Bianco d'Alba (Tuber Magnatum Pico). Se lo ordinate al ristorante, <strong>non è un ingrediente, ma una grattata "extra"</strong>. Viene pesato al tavolo su una bilancina prima e dopo la grattata sul piatto caldo (tajarin o uovo fritto). Il prezzo varia a seconda delle quotazioni della borsa del tartufo (attualmente può viaggiare sui 50/70€ ogni 10 grammi). Chiedete sempre il prezzo al grammo al cameriere prima di confermare!</p>
+                        <h3 class="text-sm font-bold text-amber-900 mb-2">Il Tartufo Bianco: Come Funziona</h3>
+                        <p class="text-xs text-amber-900/80 leading-relaxed">Siamo nel pieno della Fiera del Tartufo Bianco d'Alba. Se lo ordinate al ristorante, <strong>non è compreso nel piatto base</strong>: viene pesato al tavolo con una bilancina prima e dopo la lamellata su tajarin o uovo all'occhio di bue. Il prezzo è calcolato al grammo in base al listino della borsa del tartufo: chiedete sempre la quotazione al cameriere prima della grattata!</p>
                     </div>
                 </div>
             </div>
@@ -169,33 +234,33 @@
     </main>
 
     <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-6 text-center text-xs text-stone-500">
-        <p>Planner creato per il soggiorno a La Picchiera - Appartamento Jole (La Morra) | 31 Ottobre – 2 Novembre</p>
+        <p>Planner personalizzato per il soggiorno a La Picchiera - Appartamento Jole (La Morra) | 31 Ottobre – 2 Novembre</p>
     </footer>
 
     <script>
         const fullSchedule = [
             // Sabato
-            { day: "sab", time: "09:30 – 11:45", title: "Viaggio Parma ➔ La Morra", cat: "🚗 Logistica", dist: "215 km", drive: "2h 15m", query: "La+Morra+Centro", reasoning: "Raggiungere il cuore topografico del Barolo per l'ora di pranzo permette un ingresso dolce e panoramico.", notes: "Viaggio autostradale via A1/A21/A33. Parcheggio all'ingresso del borgo." },
-            { day: "sab", time: "11:45 – 13:15", title: "Belvedere di La Morra & Pranzo", cat: "📍 Borghi & Belvedere", dist: "In loco", drive: "0m", query: "Belvedere+di+La+Morra", reasoning: "La terrazza panoramica a 500m di quota è ideale per orientarsi visivamente e comprendere la morfologia dei colli del Barolo sin dal primo minuto.", notes: "Affaccio dalla piazza e pranzo leggero in una delle osterie o vinerie del centro." },
-            { day: "sab", time: "13:30 – 15:00", title: "Borgo di Barolo & WiMu", cat: "🏰 Cultura & Castelli", dist: "6 km", drive: "10m", query: "WiMu+Museo+del+Vino+Barolo", reasoning: "Immersione nella culla del vino più celebre d'Italia; il museo curato da François Confino è una vera e propria scenografia sensoriale, non la solita esposizione polverosa.", notes: "Visita al percorso del WiMu all'interno del Castello Falletti e passeggiata nei vicoli acciottolati." },
-            { day: "sab", time: "15:00 – 16:30", title: "Degustazione Cantina Borgogno", cat: "🍷 Enogastronomia", dist: "In loco (Barolo)", drive: "0m", query: "Cantina+Borgogno+Barolo", reasoning: "Borgogno è la storia liquida d'Italia. Scendere nei suoi sotterranei labirintici in pieno centro storico vi fa respirare il profumo del legno e della tradizione centenaria.", notes: "Visita guidata in cantina e degustazione dei grandi rossi tradizionali." },
-            { day: "sab", time: "16:45 – 18:00", title: "CHECK-IN: App. Jole (La Picchiera)", cat: "🏠 Alloggio", dist: "8,5 km", drive: "12m", query: "La+Picchiera+Appartamento+Jole+La+Morra", reasoning: "Prendere possesso dell'alloggio all'apertura oraria per rinfrescarsi e godersi la pace dei vigneti privati al crepuscolo.", notes: "Sistemazione in Borgata Serra dei Turchi 60. Pausa in appartamento.", isHousing: true },
-            { day: "sab", time: "18:15 – 19:45", title: "Passeggiata nell'Alba Pre-Cena", cat: "📍 Borghi & Belvedere", dist: "13 km", drive: "18m", query: "Piazza+Prunotto+Alba", reasoning: "Respirare l'atmosfera festosa e inebriante della 'capitale' delle Langhe durante le settimane d'oro della Fiera Internazionale del Tartufo Bianco.", notes: "Sosta al parcheggio Prunotto. Camminata pedonale in Via Vittorio Emanuele e Piazza Duomo." },
-            { day: "sab", time: "20:00 – 22:30", title: "CENA: Osteria dei Sognatori", cat: "🍷 Enogastronomia", dist: "A piedi", drive: "5m", query: "Osteria+dei+Sognatori+Alba", reasoning: "L'essenza della piola piemontese: tavoli in legno, vocio allegro, un oste teatrale che recita il menù a voce e la miglior battuta al coltello della città.", notes: "Cena conviviale e rustica nel centro storico di Alba. Rientro a La Morra dopo le 23:00.", isResto: true },
+            { day: "sab", time: "09:30 – 11:45", title: "Viaggio Parma ➔ La Morra", cat: "🚗 Logistica", dist: "215 km", drive: "2h 15m", query: "La+Morra+Centro", reasoning: "Raggiungere il colle più panoramico del Barolo in tempo per l'orario di pranzo permette un ingresso rilassante nel territorio.", notes: "Tragitto autostradale A1/A21/A33. Parcheggio all'ingresso del borgo." },
+            { day: "sab", time: "11:45 – 13:15", title: "Belvedere di La Morra & Pranzo", cat: "📍 Borghi & Belvedere", dist: "In loco", drive: "0m", query: "Belvedere+di+La+Morra", reasoning: "Il 'Balcone delle Langhe' a 500m di quota offre la visione d'insieme su tutti gli 11 comuni della DOCG, ideale per orientarsi subito.", notes: "Affaccio dalla piazza monumentale e pranzo informale in una vineria del centro." },
+            { day: "sab", time: "13:30 – 15:00", title: "Borgo di Barolo & WiMu", cat: "🏰 Cultura & Castelli", dist: "6 km", drive: "10m", query: "WiMu+Museo+del+Vino+Barolo", reasoning: "Immersione nella culla storica del vino più celebre del Piemonte; il WiMu nel Castello Falletti è un percorso interattivo ed emozionale creato da François Confino.", notes: "Visita al castello, all'Enoteca Regionale sotterranea e passeggiata tra le vie del borgo." },
+            { day: "sab", time: "15:00 – 16:30", title: "Degustazione: Cantina Borgogno", cat: "🍷 Enogastronomia", dist: "In loco (Barolo)", drive: "0m", query: "Cantina+Borgogno+Barolo", reasoning: "Borgogno è la memoria storica del Barolo. Scendere nelle sue cantine sotterranee in centro paese fa toccare con mano botti storiche e annate leggendarie.", notes: "Tour guidato delle cantine sotterranee e degustazione dei grandi rossi." },
+            { day: "sab", time: "16:45 – 18:00", title: "CHECK-IN: App. Jole (La Picchiera)", cat: "🏠 Alloggio", dist: "8,5 km", drive: "12m", query: "La+Picchiera+Appartamento+Jole+La+Morra", reasoning: "Prendere possesso dell'alloggio alle 17:00 consente di posare i bagagli e godersi il silenzio dei vigneti privati al tramonto.", notes: "Sistemazione in Borgata Serra dei Turchi 60. Pausa relax in appartamento.", isHousing: true },
+            { day: "sab", time: "18:15 – 19:45", title: "Passeggiata nell'Alba Pre-Cena", cat: "📍 Borghi & Belvedere", dist: "13 km", drive: "18m", query: "Piazza+Prunotto+Alba", reasoning: "Vivere l'animazione della 'capitale' delle Langhe durante la Fiera Internazionale del Tartufo Bianco con le sue torri medievali illuminate.", notes: "Parcheggio consigliato in Piazza Urbano Prunotto (fuori ZTL). Passeggiata pedonale in Via Maestra e Piazza Risorgimento." },
+            { day: "sab", time: "20:00 – 22:30", title: "CENA: Osteria dei Sognatori", cat: "🍷 Enogastronomia", dist: "A piedi", drive: "5m walk", query: "Osteria+dei+Sognatori+Alba", reasoning: "L'essenza della piola piemontese: accoglienza calorosa, piatti di vera tradizione casalinga, battuta al coltello e menù recitato a voce.", notes: "Cena conviviale festosa. Rientro comodo a La Morra dopo le 22:30.", isResto: true },
 
             // Domenica
-            { day: "dom", time: "09:30 – 10:30", title: "Cappella del Barolo (Brunate)", cat: "🏰 Cultura & Castelli", dist: "3,5 km", drive: "6m", query: "Cappella+del+Barolo+Brunate", reasoning: "Simbolo dell'arte contemporanea sbalzata nei vigneti. Visitarla la mattina permette di evitare il caos di auto sulla stradina stretta di campagna.", notes: "Foto di rito davanti alla facciata colorata di LeWitt & Tremlett. Passeggiata sul crinale." },
-            { day: "dom", time: "10:50 – 12:15", title: "Serralunga d'Alba & Donjon", cat: "📍 Borghi & Belvedere", dist: "15 km", drive: "20m", query: "Castello+di+Serralunga+d'Alba", reasoning: "La fortezza gotico-francese più slanciata del Piemonte domina i cru dove nascono i Barolo più strutturati e austeri e dalla massima longevità.", notes: "Passeggiata al cospetto del castello trecentesco e ampie foto panoramiche della valle." },
-            { day: "dom", time: "12:45 – 15:30", title: "PRANZO: Trattoria nelle Vigne", cat: "🍷 Enogastronomia", dist: "10 km", drive: "15m", query: "Trattoria+nelle+Vigne+Diano+d'Alba", reasoning: "Il momento d'oro culinario del weekend: un pranzo d'Ognissanti eccellente sospeso in aria grazie alla monumentale vetrata della sala principale.", notes: "Ampio parcheggio asfaltato adiacente. Menù classico (non perdetevi i tajarin e i dolci della casa).", isResto: true },
-            { day: "dom", time: "15:45 – 17:00", title: "Castiglione Falletto & La Bottega", cat: "📍 Borghi & Belvedere", dist: "8 km", drive: "12m", query: "Castiglione+Falletto+Centro", reasoning: "Borgo tranquillo e posizionato strategicamente al centro della mappa, perfetto per favorire la digestione prima di cambiare zona.", notes: "Passeggiata in piano attorno alla rocca e pausa rigenerante alla suggestiva Bottega del Vino scavata nelle mura." },
-            { day: "dom", time: "17:15 – 17:45", title: "Discesa a valle verso Bra", cat: "🚗 Logistica", dist: "18 km", drive: "20m", query: "Bra+Centro", reasoning: "Ci si sposta dalla langa collinare del Barolo verso l'area pianeggiante del Roero per scoprire un mondo diverso e legato a Slow Food.", notes: "Tragitto su strada ampia." },
-            { day: "dom", time: "17:45 – 21:00", title: "Aperitivo con Salsiccia a Bra", cat: "🍷 Enogastronomia", dist: "In loco", drive: "0m", query: "Salsiccia+di+Bra+Caffe+Converso", reasoning: "Dopo l'enorme pranzo alla Trattoria, non ha senso sedersi a cena. Molto meglio una merenda sinoira per assaggiare l'iconica Salsiccia cruda di vitello.", notes: "Passeggiata sotto i portici barocchi (Palazzo Traversa) e aperitivo rinforzato al Caffè Converso o in vineria. Rientro fluido in 15 minuti a La Morra alle 21:15." },
+            { day: "dom", time: "09:30 – 10:30", title: "Cappella del Barolo (Brunate)", cat: "🏰 Cultura & Castelli", dist: "3,5 km", drive: "6m", query: "Cappella+del+Barolo+Brunate", reasoning: "Icona di arte contemporanea immersa nei vigneti. Raggiungerla la mattina presto garantisce luce nitida e zero traffico sulla strada stretta.", notes: "Sosta fotografica alla colorata cappella di Sol LeWitt e David Tremlett. Passeggiata sui sentieri in cresta." },
+            { day: "dom", time: "10:50 – 12:15", title: "Serralunga d'Alba & Donjon", cat: "📍 Borghi & Belvedere", dist: "15 km", drive: "20m", query: "Castello+di+Serralunga+d'Alba", reasoning: "Il castello più slanciato e austero delle Langhe domina i terreni calcarei più antichi da cui nascono Barolo di straordinaria longevità.", notes: "Passeggiata attorno alla rocca medievale e vista a 360° sulla valle della Talloria." },
+            { day: "dom", time: "12:30 – 14:30", title: "Monforte d'Alba & Pranzo Leggero", cat: "📍 Borghi & Belvedere", dist: "8 km", drive: "12m", query: "Monforte+d'Alba+Centro", reasoning: "Salita all'Ortica per ammirare il celebre Anfiteatro Horszowski in ciottoli. Sosta perfetta per un pranzo agile in vineria, tenendosi leggeri per la grande cena serale.", notes: "Visita all'anfiteatro all'aperto e spuntino informale (tagliere o piatto unico) in un wine bar del borgo." },
+            { day: "dom", time: "15:00 – 16:30", title: "Castiglione Falletto & La Bottega", cat: "📍 Borghi & Belvedere", dist: "8 km", drive: "12m", query: "Castiglione+Falletto+Centro", reasoning: "Borgo tranquillo al centro geografico della DOCG, perfetto per una passeggiata rilassante attorno alle mura e un caffè alla Bottega Comunale.", notes: "Passeggiata attorno al castello e pausa caffè o degustazione al calice nei locali scavati nella roccia." },
+            { day: "dom", time: "16:45 – 19:15", title: "Relax e Tramonto a Serra dei Turchi", cat: "🏠 Alloggio", dist: "10 km", drive: "14m", query: "Borgata+Serra+dei+Turchi+60+La+Morra", reasoning: "Pausa di riposo fondamentale in alloggio: decompressione, doccia e contemplazione del foliage autunnale prima della serata gastronomica.", notes: "Relax in appartamento affacciati sui vigneti.", isHousing: true },
+            { day: "dom", time: "19:45 – 22:30", title: "CENA: Trattoria nelle Vigne", cat: "🍷 Enogastronomia", dist: "18 km", drive: "22m", query: "Trattoria+nelle+Vigne+Diano+d'Alba", reasoning: "La grande cena d'Ognissanti: cucina tradizionale sublime (tajarin ai 30 tuorli, brasato) gustata nella sala a vetrate con le luci dei colli che brillano nel buio.", notes: "Ampio parcheggio privato adiacente all'ingresso. Rientro notturno a La Morra a fine cena.", isResto: true },
 
             // Lunedì
-            { day: "lun", time: "09:15 – 10:00", title: "CHECK-OUT: La Picchiera", cat: "🏠 Alloggio", dist: "In loco", drive: "0m", query: "La+Picchiera+Appartamento+Jole+La+Morra", reasoning: "Il check-out puntuale alle 10:00 permette di essere i primi al cancello di Grinzane Cavour, massimizzando il tempo prima del rientro.", notes: "Consegna dell'appartamento, valigie in auto e partenza definitiva dalla borgata.", isHousing: true },
-            { day: "lun", time: "10:15 – 12:00", title: "Castello di Grinzane Cavour", cat: "🏰 Cultura & Castelli", dist: "11 km", drive: "14m", query: "Castello+di+Grinzane+Cavour", reasoning: "L'eredità politica e agraria del Conte Camillo Benso. È il luogo dove la moderna enologia piemontese è stata scientificamente progettata.", notes: "Visita al maniero che ospita l'Asta Mondiale del Tartufo Bianco e camminata finale nel vigneto didattico." },
-            { day: "lun", time: "12:20 – 14:15", title: "Monforte d'Alba & Anfiteatro", cat: "📍 Borghi & Belvedere", dist: "10 km", drive: "14m", query: "Monforte+d'Alba+Centro", reasoning: "Il salotto di pietra: l'anfiteatro Horszowski all'aperto, pavimentato a prato e ciottoli, è l'affascinante sorpresa che chiude il viaggio in collina.", notes: "Salita nei vicoli medievali (l'Ortica) e pranzo in un bistrot/vineria locale." },
-            { day: "lun", time: "14:30 – 16:50", title: "Rientro a Parma via Autostrada", cat: "🚗 Logistica", dist: "215 km", drive: "2h 20m", query: "Parma", reasoning: "Pianificare il rientro il lunedì pomeriggio regala il grande vantaggio di strade e caselli del tutto liberi dal traffico dei turisti domenicali.", notes: "Si esce verso Asti o Cherasco/Marene per agganciare rapidamente la rete autostradale (A33/A21/A1)." }
+            { day: "lun", time: "09:15 – 10:00", title: "CHECK-OUT: La Picchiera", cat: "🏠 Alloggio", dist: "In loco", drive: "0m", query: "La+Picchiera+Appartamento+Jole+La+Morra", reasoning: "Chiusura puntuale del soggiorno entro le 10:00 per sfruttare al meglio la mattinata culturale ed enogastronomica.", notes: "Consegna chiavi, valigie in auto e partenza definitiva dall'alloggio.", isHousing: true },
+            { day: "lun", time: "10:15 – 11:45", title: "Castello di Grinzane Cavour", cat: "🏰 Cultura & Castelli", dist: "11 km", drive: "14m", query: "Castello+di+Grinzane+Cavour", reasoning: "La dimora dove Camillo Benso modernizzò l'agricoltura piemontese. Sede dell'Enoteca Regionale e del vigneto didattico UNESCO.", notes: "Visita al maniero storico, passeggiata tra i filari monumentali e acquisto delle ultime bottiglie garantite." },
+            { day: "lun", time: "12:10 – 14:15", title: "Bra: Slow Food & Salsiccia di Bra", cat: "🍷 Enogastronomia", dist: "18 km", drive: "20m", query: "Bra+Centro", reasoning: "Culla internazionale di Slow Food. Il lunedì le macellerie storiche sono aperte per acquistare la vera Salsiccia di Bra cruda; pranzo tipico d'eccellenza prima della partenza.", notes: "Passeggiata nel centro storico barocco, acquisto salsiccia nelle macellerie del consorzio e pranzo tipico (es. Caffè Converso o Osteria del Boccondivino)." },
+            { day: "lun", time: "14:30 – 16:40", title: "Rientro a Parma via Marene", cat: "🚗 Logistica", dist: "210 km", drive: "2h 10m", query: "Parma", reasoning: "Da Bra si raggiunge il casello di Marene (A33) in soli 8 minuti, agganciando la A21/A1 con un viaggio di rientro fluido e privo del traffico del fine settimana.", notes: "Rientro a Parma nel pomeriggio." }
         ];
 
         const distancesLocal = [
@@ -204,11 +269,11 @@
             { t: "Alba (ZTL P.zza Prunotto)", k: "13 km", time: "18 min", q: "Parcheggio+Piazza+Prunotto+Alba" },
             { t: "Cappella del Barolo (Brunate)", k: "3,5 km", time: "6 min", q: "Cappella+del+Barolo+Brunate" },
             { t: "Serralunga d'Alba", k: "16 km", time: "22 min", q: "Castello+di+Serralunga+d'Alba" },
-            { t: "Trattoria Nelle Vigne (Diano)", k: "18 km", time: "22 min", q: "Trattoria+nelle+Vigne+Diano+d'Alba" },
+            { t: "Monforte d'Alba", k: "13 km", time: "18 min", q: "Monforte+d'Alba+Centro" },
             { t: "Castiglione Falletto", k: "8 km", time: "12 min", q: "Castiglione+Falletto+Centro" },
-            { t: "Bra (Centro Storico)", k: "14 km", time: "15 min", q: "Bra+Centro" },
-            { t: "Grinzane Cavour", k: "11 km", time: "14 min", q: "Castello+di+Grinzane+Cavour" },
-            { t: "Monforte d'Alba", k: "13 km", time: "18 min", q: "Monforte+d'Alba+Centro" }
+            { t: "Trattoria Nelle Vigne (Diano)", k: "18 km", time: "22 min", q: "Trattoria+nelle+Vigne+Diano+d'Alba" },
+            { t: "Castello Grinzane Cavour", k: "11 km", time: "14 min", q: "Castello+di+Grinzane+Cavour" },
+            { t: "Bra (Centro Storico)", k: "14 km", time: "15 min", q: "Bra+Centro" }
         ];
 
         let currentDayFilter = "all";
@@ -231,7 +296,6 @@
 
             const filteredData = fullSchedule.filter(i => currentDayFilter === "all" || i.day === currentDayFilter);
 
-            // Compute dynamic Maps Route button
             let routePoints = [];
             let lastQ = "";
             filteredData.forEach(i => {
